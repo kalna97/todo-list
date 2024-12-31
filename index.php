@@ -1,4 +1,5 @@
 <?php include 'backend/database.php'; ?>
+<?php include 'backend/database.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,7 +29,7 @@
                     <td>{$task['description']}</td>
                     <td>
                         <a href='edit.php?id={$task['id']}' class='btn btn-warning btn-sm'>Edit</a>
-                        <a href='delete.php?id={$task['id']}' class='btn btn-danger btn-sm'>Delete</a>
+                        <a href='backend/delete.php?id={$task['id']}' class='btn btn-danger btn-sm'>Delete</a>
                     </td>
                 </tr>";
             }

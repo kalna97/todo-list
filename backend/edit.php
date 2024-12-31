@@ -1,4 +1,7 @@
+<?php include 'database.php'; ?>
 <?php
+
+
 $id = $_GET['id'];
 $stmt = $pdo->prepare("SELECT * FROM tasks WHERE id = ?");
 $stmt->execute([$id]);
@@ -18,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 text: 'The task has been successfully updated!',
                 confirmButtonText: 'OK'
             }).then(() => {
-                window.location = 'index.php';
+                window.location = '../index.php';
             });
         };
     </script>";
