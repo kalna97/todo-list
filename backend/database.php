@@ -1,12 +1,14 @@
 <?php
-$dsn = "mysql:host=localhost;dbname=todo_list;charset=utf8mb4";
-$username = "root";
-$password = "";
+$host = '172.28.128.1';
+$dbname = 'todo_list';
+$username = 'root';
+$password = 'root';
 
 try {
-    $pdo = new PDO($dsn, $username, $password);
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
     die("Database connection failed: " . $e->getMessage());
 }
 ?>
+
